@@ -1,33 +1,65 @@
 # Team Name
-
-[Ed Discussion Info Thread](https://edstem.org/us/courses/60909/discussion/5248321)
+Small NLP
 
 # Project Title
+Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techniques
 
 # Project summary
-```
-(4-5+ sentences). Fill in your problem and background/motivation (why do you want to solve it? Why is it interesting?). This should provide some detail (don’t just say “I’ll be working on object detection”)
-```
+With the recent rise of extremely powerful LLMs which perform sentiment analysis at record high scores there is also a greater need for considerable amounts of compute to run such models. The deep learning models which excel at this NLP task usually require cloud compute or a local GPU cluster which users may have to outsource to. As such this project seeks to evaluate and compare the performance of a homebrewed deep learning model which is drastically smaller then the leading LLMs such as BERT or GPT. 
+
+The smaller model will be tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis and compare it to the computationally intensive models. Aswell as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, non-transformer-based, and standard deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
+
+With the research into how a smaller sized model can hopefully outperform the traditional ML techniques while achieving reasonable scores when compared to the larger models we hope to show how a locally runnable model can still perform sentiment analysis at a high level. This can show ways to reduce the deployment and computation costs of the larger models with sufficient hyperparameter tuning of the smaller deep learning model.
+
+
 
 # What you will do 
 ``` 
 (Approach, 4-5+ sentences) - Be specific about what you will implement and what existing code you will use. Describe what you actually plan to implement or the experiments you might try, etc. Again, provide sufficient information describing exactly what you’ll do. One of the key things to note is that just downloading code and running it on a dataset is not sufficient for a description or a project! Some thorough implementation, analysis, theory, etc. have to be done for the project.
 ```
 
+
+
+
 # Resources / Related Work & Papers 
 ``` 
 (4-5+ sentences). What is the state of art for this problem? Note that it is perfectly fine for this project to implement approaches that already exist. This part should show you’ve done some research about what approaches exist.
 ```
 
+**Write a short summary of the papers below and what information they provide for the project**
+
+1. Link to some benchmarks for models on the dataset we are using: [link](https://paperswithcode.com/sota/sentiment-analysis-on-imdb)
+
+
+*Both of these papers (2, 3) also give good scoring metrics for how we can compare the models, ie. F-score.*
+
+2. This paper talks about traditional methods and their performance on the dataset: [link](../documentation/Analyzing_Sentiment_using_IMDb_Dataset.pdf)
+
+3. Another paper on deep nns run on the same dataset (CNN, LSTM, and LSTM-CNN): [link](../documentation/Performance_Analysis_of_Different_Neural_Networks_for_Sentiment_Analysis_on_IMDb_Movie_Reviews.pdf)
+
+4. Very similar research to paper 3: [link](../documentation/ssrn-3403985.pdf)
+
+5. Paper doing traditional ML methods for our dataset: [link](../documentation/Sentiment_Analysis_of_IMDb_Movie_Reviews__A_comparative_study_on_Performance_of_Hyperparameter-tuned_Classification_Algorithms.pdf)
+
+
 # Datasets 
-```
-(Provide a link to the dataset). This is crucial! Deep learning is data-driven, so what datasets you use is crucial. One of the key things is to make sure you don’t try to create and especially annotate your own data! Otherwise, the project will be taken over by this.
-```
+IMDb Movie Reviews for Sentiment Analysis:
+* https://ai.stanford.edu/~amaas/data/sentiment/
+
+Other links to the dataset:
+* https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews 
+* https://paperswithcode.com/dataset/imdb-movie-reviews
 
 # List your Group members.
+Jaden Zwicker
+
+
 
 
 # Example Proposal
+[Ed Discussion Info Thread](https://edstem.org/us/courses/60909/discussion/5248321)
+
+
 ```
 Team: Next Move
 
