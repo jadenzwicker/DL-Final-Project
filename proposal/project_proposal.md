@@ -25,14 +25,18 @@ Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techni
 (4-5+ sentences). What is the state of art for this problem? Note that it is perfectly fine for this project to implement approaches that already exist. This part should show you’ve done some research about what approaches exist.
 ```
 
-Link to some benchmarks for models on the dataset we are using: 
-* https://paperswithcode.com/sota/sentiment-analysis-on-imdb
-
-This paper talks about traditional methods and their performance on the dataset: [link](../documentation/Analyzing_Sentiment_using_IMDb_Dataset.pdf)
-
-Another paper on deep nns run on the same dataset (CNN, LSTM, and LSTM-CNN): [link](../documentation/Performance_Analysis_of_Different_Neural_Networks_for_Sentiment_Analysis_on_IMDb_Movie_Reviews.pdf)
+1. Link to some benchmarks for models on the dataset we are using: [link](https://paperswithcode.com/sota/sentiment-analysis-on-imdb)
 
 
+*Both of these papers (2, 3) also give good scoring metrics for how we can compare the models, ie. F-score.*
+
+2. This paper talks about traditional methods and their performance on the dataset: [link](../documentation/Analyzing_Sentiment_using_IMDb_Dataset.pdf)
+
+3. Another paper on deep nns run on the same dataset (CNN, LSTM, and LSTM-CNN): [link](../documentation/Performance_Analysis_of_Different_Neural_Networks_for_Sentiment_Analysis_on_IMDb_Movie_Reviews.pdf)
+
+4. Very similar research to paper 3: [link](../documentation/ssrn-3403985.pdf)
+
+5. Paper doing traditional ML methods for our dataset: [link](../documentation/Sentiment_Analysis_of_IMDb_Movie_Reviews__A_comparative_study_on_Performance_of_Hyperparameter-tuned_Classification_Algorithms.pdf)
 
 
 # Datasets 
