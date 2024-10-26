@@ -5,10 +5,11 @@ Small NLP
 Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techniques
 
 # Project summary
-```
-(4-5+ sentences). Fill in your problem and background/motivation (why do you want to solve it? Why is it interesting?). This should provide some detail (don’t just say “I’ll be working on object detection”)
-```
+With the recent rise of extremely powerful LLMs which perform sentiment analysis at record high scores there is also a greater need for considerable amounts of compute to run such models. The deep learning models which excel at this NLP task usually require cloud compute or a local GPU cluster which users may have to outsource to. As such this project seeks to evaluate and compare the performance of a homebrewed deep learning model which is drastically smaller then the leading LLMs such as BERT or GPT. 
 
+The smaller model will be tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis and compare it to the computationally intensive models. Aswell as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, non-transformer-based, and standard deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
+
+With the research into how a smaller sized model can hopefully outperform the traditional ML techniques while achieving reasonable scores when compared to the larger models we hope to show how a locally runnable model can still perform sentiment analysis at a high level. This can show ways to reduce the deployment and computation costs of the larger models with sufficient hyperparameter tuning of the smaller deep learning model.
 
 
 
@@ -24,6 +25,8 @@ Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techni
 ``` 
 (4-5+ sentences). What is the state of art for this problem? Note that it is perfectly fine for this project to implement approaches that already exist. This part should show you’ve done some research about what approaches exist.
 ```
+
+**Write a short summary of the papers below and what information they provide for the project**
 
 1. Link to some benchmarks for models on the dataset we are using: [link](https://paperswithcode.com/sota/sentiment-analysis-on-imdb)
 
