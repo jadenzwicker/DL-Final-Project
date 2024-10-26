@@ -28,6 +28,10 @@ Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techni
 Link to some benchmarks for models on the dataset we are using: 
 * https://paperswithcode.com/sota/sentiment-analysis-on-imdb
 
+This paper talks about traditional methods and their performance on the dataset: [link](../documentation/Analyzing_Sentiment_using_IMDb_Dataset.pdf)
+
+Another paper on deep nns run on the same dataset (CNN, LSTM, and LSTM-CNN): [link](../documentation/Performance_Analysis_of_Different_Neural_Networks_for_Sentiment_Analysis_on_IMDb_Movie_Reviews.pdf)
+
 
 
 
