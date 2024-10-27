@@ -5,18 +5,19 @@ Small NLP
 Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techniques
 
 # Project summary
-With the recent rise of extremely powerful LLMs which perform sentiment analysis at record high scores there is also a greater need for considerable amounts of compute to run such models. The deep learning models which excel at this NLP task usually require cloud compute or a local GPU cluster which users may have to outsource to. As such this project seeks to evaluate and compare the performance of a homebrewed deep learning model which is drastically smaller then the leading LLMs such as BERT or GPT. 
+With the recent rise of extremely powerful LLMs which perform sentiment analysis at record high scores there is also a greater need for considerable amounts of compute to run such models. The deep learning models which excel at this NLP task usually require cloud compute or a local GPU cluster which users may have to outsource to. As such this project seeks to evaluate and compare the performance of a fine-tuned very small deep learning model which will be able to run on a lot more hardware then the leading LLMs such as BERT or GPT. 
 
-The smaller model will be tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis and compare it to the computationally intensive models. Aswell as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, non-transformer-based, and standard deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
+The smaller model will be fine-tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis. We will also compare it to the computationally intensive models. Aswell as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, non-transformer-based, and standard deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
 
-With the research into how a smaller sized model can hopefully outperform the traditional ML techniques while achieving reasonable scores when compared to the larger models we hope to show how a locally runnable model can still perform sentiment analysis at a high level. This can show ways to reduce the deployment and computation costs of the larger models with sufficient hyperparameter tuning of the smaller deep learning model.
-
+With the research into how a smaller sized model can hopefully outperform the traditional ML techniques while achieving reasonable scores when compared to the larger models we hope to show how a locally runnable model can still perform sentiment analysis at a high level. This can show ways to reduce the deployment and computation costs of the larger models with sufficient hyperparameter tuning of the smaller deep learning model. We can also perhaps show that there are diminishing returns when using more and more complex NLP models for tasks that aren't too hard (like most sentiment analysis)
 
 
 # What you will do 
 ``` 
 (Approach, 4-5+ sentences) - Be specific about what you will implement and what existing code you will use. Describe what you actually plan to implement or the experiments you might try, etc. Again, provide sufficient information describing exactly what you’ll do. One of the key things to note is that just downloading code and running it on a dataset is not sufficient for a description or a project! Some thorough implementation, analysis, theory, etc. have to be done for the project.
 ```
+
+We will first setup SmolLM, a publicy available 135M-parameter LLM on Georgia Tech's PACE ICE GPUs. Then we will setup code to establish the baseline performance of this model used for sentiment analysis. We will then try to use few-shot learning and fine-tuning to improve the model's performance on sentiment analysis, using a dataset from IMDB movie reviews. We will perform an in-depth analysis explaining what model parameters are important, which can be tuned and why, and how the fine-tuning process can improve over our baseline performance. We will also quickly try to see which non-LLM techniques (simpler things like n-grams or other methods) can get reasonable scores on this task of sentiment analysis.
 
 
 
@@ -25,6 +26,11 @@ With the research into how a smaller sized model can hopefully outperform the tr
 ``` 
 (4-5+ sentences). What is the state of art for this problem? Note that it is perfectly fine for this project to implement approaches that already exist. This part should show you’ve done some research about what approaches exist.
 ```
+
+For state-of-the-art sentiment analysis, transformer-based models like BERT, RoBERTa, and GPT-3 have demonstrated remarkable performance due to their ability to capture contextual information and semantic nuances. These models leverage pre-trained embeddings fine-tuned on vast datasets, resulting in a deep understanding of sentiment at both the word and sentence levels. 
+ Other transformer-based approaches, such as T5 and DeBERTa, utilize enhanced architecture to improve the capture of syntactic and semantic structures, further boosting performance. Notably, SOTA models now integrate task-specific tuning or domain adaptation for optimal results in specific applications, like social media sentiment analysis. These models frequently surpass traditional benchmarks and achieve top scores on popular sentiment datasets, including SST-2 and IMDB. The advantage of complex models is that for the harder examples (such as people using sarcasm), a real in-depth understanding of humans and their use of language can be required.
+
+For non-transformer-based methods, RNNs (e.g., LSTMs and GRUs) and CNNs were previously popular due to their effectiveness in sequential text processing, capturing dependencies in text through memory and convolutional filters. Though less context-aware than transformers, these architectures still perform well when combined with pre-trained word embeddings (like GloVe or Word2Vec), offering competitive sentiment analysis performance at lower computational costs.
 
 **Write a short summary of the papers below and what information they provide for the project**
 
@@ -52,6 +58,8 @@ Other links to the dataset:
 
 # List your Group members.
 Jaden Zwicker
+Brieuc Popper
+
 
 
 
