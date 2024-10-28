@@ -7,7 +7,7 @@ Lightweight Sentiment Analysis: Small LLMs vs. Big Models and Traditional Techni
 # Project summary
 With the recent rise of extremely powerful LLMs which perform sentiment analysis at record high scores there is also a greater need for considerable amounts of compute to run such models. The deep learning models which excel at this NLP task usually require cloud compute or a local GPU cluster which users may have to outsource to. As such this project seeks to evaluate and compare the performance of a fine-tuned very small deep learning model which will be able to run on a lot more hardware then the leading LLMs such as BERT or GPT. 
 
-The smaller model will be fine-tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis. We will also compare it to the computationally intensive models. Aswell as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, non-transformer-based, and standard deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
+The smaller model will be fine-tuned to IMDb’s movie review dataset to assess its performance in sentiment analysis. We will also compare it to the computationally intensive models. As well as evaluating the small deep learning models performance versus industry grade models it will also be compared to traditional ML techniques, and standard non-transformer deep learning networks. Some of the other models for evaluation include: CNNs, LSTM, LSTM-CNN, Logistic Regression, Naive Bayes, and Random Forest learners. These benchmarks of performance will be attained from the existing literature for this well tested dataset.
 
 With the research into how a smaller sized model can hopefully outperform the traditional ML techniques while achieving reasonable scores when compared to the larger models we hope to show how a locally runnable model can still perform sentiment analysis at a high level. This can show ways to reduce the deployment and computation costs of the larger models with sufficient hyperparameter tuning of the smaller deep learning model. We can also perhaps show that there are diminishing returns when using more and more complex NLP models for tasks that aren't too hard (like most sentiment analysis)
 
@@ -17,8 +17,7 @@ With the research into how a smaller sized model can hopefully outperform the tr
 (Approach, 4-5+ sentences) - Be specific about what you will implement and what existing code you will use. Describe what you actually plan to implement or the experiments you might try, etc. Again, provide sufficient information describing exactly what you’ll do. One of the key things to note is that just downloading code and running it on a dataset is not sufficient for a description or a project! Some thorough implementation, analysis, theory, etc. have to be done for the project.
 ```
 
-We will first setup SmolLM, a publicy available 135M-parameter LLM on Georgia Tech's PACE ICE GPUs. Then we will setup code to establish the baseline performance of this model used for sentiment analysis. We will then try to use few-shot learning and fine-tuning to improve the model's performance on sentiment analysis, using a dataset from IMDB movie reviews. We will perform an in-depth analysis explaining what model parameters are important, which can be tuned and why, and how the fine-tuning process can improve over our baseline performance. We will also quickly try to see which non-LLM techniques (simpler things like n-grams or other methods) can get reasonable scores on this task of sentiment analysis.
-
+We will first setup SmolLM, a publicy available 135M-parameter LLM on Georgia Tech's PACE ICE GPUs. Then we will setup code to establish the baseline performance of this model used for sentiment analysis. We will then try to use few-shot learning and fine-tuning to improve the model's performance on sentiment analysis, using a dataset from IMDB movie reviews. We will perform an in-depth analysis explaining what model parameters are important, which can be tuned and why, and how the fine-tuning process can improve over our baseline performance. We will also assess what performance can be reached with the same evaluation procedure, when replacing the LLM to another model such as the ones mentioned in the project summary.
 
 
 
@@ -32,12 +31,10 @@ For state-of-the-art sentiment analysis, transformer-based models like BERT, RoB
 
 For non-transformer-based methods, RNNs (e.g., LSTMs and GRUs) and CNNs were previously popular due to their effectiveness in sequential text processing, capturing dependencies in text through memory and convolutional filters. Though less context-aware than transformers, these architectures still perform well when combined with pre-trained word embeddings (like GloVe or Word2Vec), offering competitive sentiment analysis performance at lower computational costs.
 
-**Write a short summary of the papers below and what information they provide for the project**
+These 5 papers are very relevant to our project :
 
-1. Link to some benchmarks for models on the dataset we are using: [link](https://paperswithcode.com/sota/sentiment-analysis-on-imdb)
+1. Link to some benchmarks for models on the IMDB dataset we are using: [link](https://paperswithcode.com/sota/sentiment-analysis-on-imdb)
 
-
-*Both of these papers (2, 3) also give good scoring metrics for how we can compare the models, ie. F-score.*
 
 2. This paper talks about traditional methods and their performance on the dataset: [link](../documentation/Analyzing_Sentiment_using_IMDb_Dataset.pdf)
 
@@ -45,7 +42,15 @@ For non-transformer-based methods, RNNs (e.g., LSTMs and GRUs) and CNNs were pre
 
 4. Very similar research to paper 3: [link](../documentation/ssrn-3403985.pdf)
 
-5. Paper doing traditional ML methods for our dataset: [link](../documentation/Sentiment_Analysis_of_IMDb_Movie_Reviews__A_comparative_study_on_Performance_of_Hyperparameter-tuned_Classification_Algorithms.pdf)
+5. Paper doing traditional ML methods for our dataset: [link](../documentation/Sentiment_Analysis_of_IMDb_Movie_Reviews__A_comparative_study_on_Performance_of_Hyperparameter-tuned_Classification_Algorithms.pdf)"
+
+
+
+- [1] paperswithcode.com/sota/sentiment-analysis-on-imdb
+- [2] Tripathi, Sandesh, et al. "Analyzing sentiment using IMDb dataset."
+- [3] Haque, Md Rakibul, Salma Akter Lima, and Sadia Zaman Mishu. "Performance analysis of different neural networks for sentiment analysis on IMDb movie reviews."
+- [4] Ali, Nehal Mohamed, Marwa Mostafa Abd El Hamid, and Aliaa Youssif. "Sentiment analysis for movies reviews dataset using deep learning models."
+ - [5] Ghosh, Ayanabha. "Sentiment analysis of IMDb movie reviews: A comparative study on performance of hyperparameter-tuned classification algorithms."
 
 
 # Datasets 
@@ -57,9 +62,9 @@ Other links to the dataset:
 * https://paperswithcode.com/dataset/imdb-movie-reviews
 
 # List your Group members.
-Jaden Zwicker
-Brieuc Popper
-Houshmand Abbaszadeh
+ - Jaden Zwicker
+ - Brieuc Popper
+ - Houshmand Abbaszadeh
 
 
 
