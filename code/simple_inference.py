@@ -1,16 +1,17 @@
 import time
-begin = time.time()
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 #FROM https://huggingface.co/HuggingFaceTB/SmolLM-135M
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
 checkpoint = "HuggingFaceTB/SmolLM-135M"
 device = "cuda" # for GPU usage or "cpu" for CPU usage
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 # for multiple GPUs install accelerate and do `model = AutoModelForCausalLM.from_pretrained(checkpoint, device_map="auto")`
 model = AutoModelForCausalLM.from_pretrained(checkpoint).to(device)
 
-import torch
+# Check cuda version torch is using
+print(f"Using torch {torch.__version__} with cuda {torch.version.cuda}")
 
 # Define the movie review for classification
 example_review = "This movie was an absolute masterpiece with stunning visuals and a gripping story!"
@@ -37,14 +38,15 @@ prompt = ''.join(prompt_)
 inputs = tokenizer(prompt, return_tensors="pt").to(device)
 
 # Generate the output
+start_inf_time = time.time()
+
 with torch.no_grad():
     output = model.generate(**inputs, max_new_tokens=5)
+
+end_inf_time = time.time()
 
 # Decode and print the output
 output_str = tokenizer.decode(output[0], skip_special_tokens=True)
 print(output_str)
 
-
-
-end = time.time()
-print(f"Inference time: {end - begin:.2f} seconds")
+print(f"Inference time: {end_inf_time - start_inf_time:.2f} seconds")
