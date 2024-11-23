@@ -1,7 +1,16 @@
 import time
+import os
+from dotenv import load_dotenv
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
+# Update HF cache directory
+env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.env'))
+load_dotenv(env_path)
+hf_cache_dir = os.getenv('TRANSFORMERS_CACHE')
+os.makedirs(hf_cache_dir, exist_ok=True)
+print(f"Hugging Face cache directory set to: {hf_cache_dir}")
+
+from transformers import AutoModelForCausalLM, AutoTokenizer
 #FROM https://huggingface.co/HuggingFaceTB/SmolLM-135M
 
 checkpoint = "HuggingFaceTB/SmolLM-135M"
