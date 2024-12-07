@@ -202,6 +202,7 @@ dependencies:
   - pip=24.2=py312h06a4308_0
   - platformdirs=3.10.0=py312h06a4308_0
   - ply=3.11=py312h06a4308_1
+  - prettytable=3.5.0=py312h06a4308_0
   - prometheus_client=0.21.0=py312h06a4308_0
   - prompt-toolkit=3.0.43=py312h06a4308_0
   - prompt_toolkit=3.0.43=hd3eb1b0_0
