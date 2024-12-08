@@ -1,0 +1,8 @@
+Images showing size of models:
+https://huggingface.co/blog/smollm 
+
+Repo of models (SmolLM2):
+https://huggingface.co/collections/HuggingFaceTB/smollm2-6723884218bcda64b34d7db9
+https://huggingface.co/HuggingFaceTB/SmolLM2-135M
+https://huggingface.co/HuggingFaceTB/SmolLM2-360M
+https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B
