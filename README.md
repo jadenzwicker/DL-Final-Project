@@ -1,15 +1,16 @@
-# DL-Final-Project
-A group repository to store the code and documents for CS 7643's Final Project
+# Fine-tuning a Tiny LLM for Sentiment Analysis
+*Started Sep 2024 — Georgia Tech, CS 7643 Deep Learning*
 
+Group project: how far can a small model (SmolLM2-135M) go on IMDb binary sentiment analysis?
 
- - ./proposal has our Project Proposal
- - ./initial-test-code has a python script for a simple inference with a LLM loaded with the transformers library, and code to run it on the Georgia Tech GPUs (PACE ICE computing cluster)
- - ./environments has some yml conda envs to help you setup, however it is probably easier to just setup a clean PyTorch environment (ideally with GPU support w/ CUDA). Then to install transformers.
+Result: ~90% accuracy after fine-tuning, vs. zero-shot / few-shot baselines.
 
-## Experiments
+## Contents
 
-The experiments are in two python notebooks. As mentioned above, you need a Python PyTorch environment, with enough VRAM and RAM depending on the batch sizes etc. You need to install HuggingFace's transformers library [https://huggingface.co/docs/transformers/en/installation] and that should suffice. 
-
-The notebook for finetuning is annotated and self-explanatory, and is used to fine-tune SmolLM2 to reach almost 90% accuracy on IMDb binary sentiment analysis.
-
-The other notebook is for zero-shot / few-shot SmolLM2 benchmarking.
+- `proposal/` — project proposal
+- `inital-test-code/` — simple `transformers` inference script + PACE-ICE slurm example
+- `environments/` — conda ymls (or just use a clean PyTorch + CUDA env with `transformers`)
+- `experiments/` — two notebooks:
+  - `finetune_smolLM-135.ipynb` — fine-tuning (annotated, start here)
+  - `default_all_smolLM.ipynb` — zero-shot / few-shot benchmarking
+- `DL-Final-Project-Report/` — final report
